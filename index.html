@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="DRINKHATS — streetwear para tu propio estilo. Sudaderas, camisetas oversize, gorras y más.">
+  <title>DRINKHATS® — Streetwear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">DRINKHATS® — STREETWEAR PARA TU PROPIO ESTILO</div>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="DrinkHats inicio">DRINK<span>HATS</span><sup>®</sup></a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="#coleccion">Colección</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cart-open" id="openCart" aria-label="Abrir carrito">CARRITO <span id="cartCount">0</span> <span aria-hidden="true">↗</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> NUEVA MARCA · GUATEMALA</p>
+        <h1>OWN YOUR<br><span>UNIFORM.</span></h1>
+        <p class="hero-text">Piezas urbanas. Siluetas amplias. Actitud propia. Tu estilo no necesita permiso.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#coleccion">COMPRAR COLECCIÓN <span>↗</span></a>
+          <a class="text-link" href="#nosotros">CONOCÉ DRINKHATS</a>
+        </div>
+        <div class="hero-foot"><span>01 / DROP 001</span><span>HECHO PARA DESTACAR</span></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Fotografía editorial de moda urbana en tonos oscuros">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-label label-top">DH / STREET DEPT.</div>
+        <div class="hoodie-shape"><div class="hood"></div><div class="hoodie-body"><div class="hoodie-seam"></div><span>DH</span></div><div class="sleeve sleeve-left"></div><div class="sleeve sleeve-right"></div></div>
+        <div class="art-label label-bottom">DROP 001 — GUATEMALA</div>
+        <span class="art-index">DH—001</span>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Lema de la marca"><div>STREETWEAR / EVERYDAY UNIFORM / DRINKHATS® / STREETWEAR / EVERYDAY UNIFORM / DRINKHATS® /&nbsp;</div></section>
+
+    <section class="collection section-wrap" id="coleccion">
+      <div class="section-heading">
+        <div><p class="eyebrow">LA SELECCIÓN</p><h2>SHOP THE <span>DROP.</span></h2></div>
+        <p class="section-note">Básicos con presencia.<br>Elegí tus piezas favoritas.</p>
+      </div>
+      <div class="filters" id="filters" aria-label="Filtrar productos">
+        <button class="filter active" data-filter="Todos">TODO</button>
+        <button class="filter" data-filter="Sudaderas ESSENTIALS">SUDADERAS</button>
+        <button class="filter" data-filter="Camisetas oversize">CAMISETAS</button>
+        <button class="filter" data-filter="Gorras">GORRAS</button>
+        <button class="filter" data-filter="Pantalones cargo">CARGOS</button>
+        <button class="filter" data-filter="Conjuntos deportivos">CONJUNTOS</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="small-print">Las fotos y precios son de muestra. Editá el catálogo antes de publicar. Los artículos identificados como ESSENTIALS deben ser originales o describirse claramente como inspirados, sin confundir al comprador.</p>
+    </section>
+
+    <section class="manifesto" id="nosotros">
+      <div class="manifesto-mark">DH<span>®</span></div>
+      <div class="manifesto-copy"><p class="eyebrow">NO SEGUIMOS EL RUIDO</p><h2>YOUR FIT.<br><span>YOUR RULES.</span></h2><p>DRINKHATS nace para quienes convierten lo cotidiano en una declaración de estilo. Una marca urbana, directa y sin exceso.</p></div>
+      <div class="manifesto-side">ESTILO PROPIO<br>DESDE GUATEMALA.</div>
+    </section>
+
+    <section class="newsletter section-wrap" id="contacto">
+      <div><p class="eyebrow">MANTENETE AL TANTO</p><h2>THE NEXT DROP<br>IS <span>COMING.</span></h2></div>
+      <form id="newsletterForm" class="newsletter-form">
+        <label for="newsletterEmail">Dejá tu correo para enterarte de nuevas colecciones.</label>
+        <div class="email-row"><input type="email" id="newsletterEmail" placeholder="tu@email.com" required><button type="submit" aria-label="Enviar correo">↗</button></div>
+        <p class="form-note" id="newsletterMessage">Formulario de demostración; conectalo a una plataforma de correo para recibir suscripciones.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="wordmark" href="#">DRINK<span>HATS</span><sup>®</sup></a>
+    <p>STREETWEAR PARA TU PROPIO ESTILO.</p>
+    <span>© <span id="year"></span> DRINKHATS. GUATEMALA.</span>
+  </footer>
+
+  <div class="drawer-backdrop" id="backdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="drawer-head"><div><p class="eyebrow">TU SELECCIÓN</p><h2>EL CARRITO <span id="drawerCount">(0)</span></h2></div><button class="icon-button" id="closeCart" aria-label="Cerrar carrito">✕</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-bottom">
+      <div class="subtotal"><span>Subtotal estimado</span><strong id="subtotal">Q0.00</strong></div>
+      <p class="checkout-note">El envío se calcula aparte. No se procesa ningún pago en esta versión de demostración.</p>
+      <button class="button button-light checkout-button" id="checkoutButton">CONTINUAR PEDIDO <span>↗</span></button>
+      <button class="clear-cart" id="clearCart">Vaciar carrito</button>
+    </div>
+  </aside>
+
+  <dialog id="checkoutDialog" class="checkout-dialog">
+    <form id="checkoutForm">
+      <div class="dialog-heading"><div><p class="eyebrow">ÚLTIMO PASO</p><h2>ARMÁ TU <span>PEDIDO.</span></h2></div><button type="button" class="icon-button" id="closeCheckout" aria-label="Cerrar">✕</button></div>
+      <p class="dialog-intro">Dejanos tus datos para preparar el resumen del pedido.</p>
+      <label for="customerName">Nombre completo</label><input id="customerName" name="customerName" required placeholder="Tu nombre">
+      <label for="customerPhone">Teléfono / WhatsApp</label><input id="customerPhone" name="customerPhone" required inputmode="tel" placeholder="+502 ...">
+      <label for="customerAddress">Zona, municipio o dirección de entrega</label><input id="customerAddress" name="customerAddress" required placeholder="Ej. Zona 1, Ciudad de Guatemala">
+      <label for="customerNotes">Notas (tallas, colores, etc.)</label><textarea id="customerNotes" name="customerNotes" rows="3" placeholder="Especificá tus tallas y colores preferidos"></textarea>
+      <button class="button button-light full-button" type="submit">GENERAR RESUMEN DEL PEDIDO ↗</button>
+      <p class="form-note">Esto no cobra ni envía automáticamente el pedido. Podés copiar el resumen y confirmar con la tienda.</p>
+    </form>
+  </dialog>
+
+  <dialog id="orderDialog" class="checkout-dialog order-dialog">
+    <div class="dialog-heading"><div><p class="eyebrow">PEDIDO PREPARADO</p><h2>TODO <span>LISTO.</span></h2></div><button class="icon-button" id="closeOrder" aria-label="Cerrar">✕</button></div>
+    <p>Este es el resumen de tu pedido. Copialo para enviarlo a DRINKHATS y confirmar disponibilidad, entrega y pago.</p>
+    <textarea id="orderSummary" rows="12" readonly></textarea>
+    <button class="button button-light full-button" id="copyOrder">COPIAR RESUMEN ↗</button>
+    <p class="form-note" id="copyMessage"></p>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
